@@ -1,0 +1,18 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: co-web-reports 
+  namespace: openshift-compliance
+spec:
+  failedBuildsHistoryLimit: 5
+  output:
+    to:
+      kind: ImageStreamTag
+      name: co-web-reports
+  runPolicy: Serial
+  source:
+    git:
+      ref: main
+      uri: https://github.com/raresd/co-web-reports.git 
+  strategy:
+    type: Docker
