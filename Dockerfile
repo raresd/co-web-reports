@@ -10,6 +10,4 @@ COPY ./gen-html-reports.sh /
 
 RUN chmod +x /gen-html-reports.sh
 
-USER 1001 
-
 ENTRYPOINT ["/gen-html-reports.sh"]
