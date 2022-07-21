@@ -8,7 +8,7 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: co-web-reports
+      name: co-web-reports:latest
   runPolicy: Serial
   source:
     git:
